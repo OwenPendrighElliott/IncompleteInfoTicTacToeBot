@@ -41,7 +41,7 @@ async def on_ready():
     print(f"Logged in as {bot.user.name}")
 
 # add misc commands cog
-bot.add_cog(bot_game.BotCommands(bot))
+bot.add_cog(bot_game.TicTacToeCommands(bot))
 
 # run the bot
 bot.run(TOKEN)
