@@ -4,6 +4,6 @@ Allows two players in a discord server to play Tic Tac Toe with incomplete infor
 
 ## Commands
 
-`$play_game user` : Challengers 'user' to a game.
+`$play_game user` : Challenges 'user' to a game.
 
-`$place x y` : Places a X or O at the x y coordinates specified (indexes from 0 of course).
+`$place x y` : Places an X or O at the x y coordinates specified (indexes from 0 of course).

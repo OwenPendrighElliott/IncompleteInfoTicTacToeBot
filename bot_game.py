@@ -87,7 +87,7 @@ class BotCommands(commands.Cog):
 
         board_str = self.print_board(self.board)
 
-        await ctx.send(f'{ctx.message.author.name} placed a {self.int2char[self.current_int]} at {x}, {y}.\n`{board_str}`')
+        await ctx.send(f'{ctx.message.author.name} placed a {self.int2char[self.current_int]} at [{x}, {y}].\n`{board_str}`')
 
         won, mark = self.is_done(self.board)
 
