@@ -72,6 +72,10 @@ class TicTacToeCommands(commands.Cog):
             await ctx.send(f'It is not your turn, {ctx.message.author.name}.')
             return
 
+        if not 0 <= x <= 2 or not 0 <= y <= 2:
+            await ctx.send(f'Invalid coordinates, {ctx.message.author.name}.')
+            return
+
         if self.board[x][y] != 0:
             await ctx.send(f'{self.whos_go}, please choose an empty cell.')
             return 
@@ -123,7 +127,7 @@ class TicTacToeCommands(commands.Cog):
         if not p2score:
             await ctx.send(f'{self.challenger.name} did not achieve their goal!')
         
-        await ctx.send(f'Scores:\n {self.initiator.name} : {int(p1score)}\n {self.challenger.name} : {int(p2score)}')
+        await ctx.send(f'Scores:\n{self.initiator.name}: {int(p1score)}\n{self.challenger.name}: {int(p2score)}')
         return 
 
     def is_won(self, board: List[List[int]]) -> Tuple[bool, int]:
