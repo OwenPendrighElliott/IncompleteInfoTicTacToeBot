@@ -32,9 +32,6 @@ class BotCommands(commands.Cog):
         self.initiator_goal = random.choice(['win', 'lose', 'draw'])
         self.challenger_goal = random.choice(['win', 'lose', 'draw'])
 
-        print(self.initiator_goal)
-        print(self.challenger_goal)
-
         self.initiator = ctx.message.author
         for member in ctx.guild.members:
             if member.name.lower() == name.lower():
