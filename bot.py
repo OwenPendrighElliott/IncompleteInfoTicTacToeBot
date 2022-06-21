@@ -27,10 +27,10 @@ async def help(ctx):
         colour = discord.Colour.orange()
     )
     embed.set_author(name='help')
-    embed.add_field(name='!play_game, alias=[!pg]', 
+    embed.add_field(name='$play_game, alias=[$pg]', 
                     value='Challenge someone to a game of Tic Tac Toe with incomplete information. You must specify a user.',
                     inline=False)
-    embed.add_field(name='!place, alias=[!p]', 
+    embed.add_field(name='$place, alias=[$p]', 
                 value='Places a mark on the board at the specified x y coordinates.',
                 inline=False)
     await ctx.send(embed=embed)
